@@ -20,7 +20,7 @@ Proxy Forge is a powerful tool that can be used by both developers and businesse
 
 I had to find a solution for one of my clients where certain eCommerce websites were supposed to be scraped but only allowed IP addresses from the UK region. I purchased a VPC from a cloud provider in the UK, but I later discovered that the target website implements IP throttling, which temporarily disables it. As a result, I built this solution manually (no Terraform scripts) and without load balancers. 
 
-Since the project is finished, I've been learning Terraform and automating its setup, which takes less than 5 minutes to complete.
+I've been learning Terraform since then, and automated its setup for you. Now it takes less than 5 minutes to complete.
 
 
 ## Why DigitalOcean?
