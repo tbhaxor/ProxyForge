@@ -16,6 +16,13 @@ Proxy Forge is a powerful tool that can be used by both developers and businesse
 - **Detailed Logging:** Comprehensive logging for monitoring and troubleshooting.
 - **Open Source:** Proxy Forge is open-source, allowing for community contributions and customization.
 
+## Motivation
+
+I had to find a solution for one of my clients where certain eCommerce websites were supposed to be scraping but only allowed IP addresses from the UK region. I purchased a VPC from a cloud provider in the UK, but I later discovered that the target website implements IP throttling, which temporarily disables it. As a result, I built this solution manually (no Terraform scripts) and without load balancers. 
+
+Since the project is finished, I've been learning Terraform and automating its setup, which takes less than 5 minutes to complete.
+
+
 ## Why DigitalOcean?
 
 There are many reasons why you might choose to use DigitalOcean over other cloud providers. Some of the key benefits include:
