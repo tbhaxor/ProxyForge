@@ -32,7 +32,8 @@ There are many reasons why you might choose to use DigitalOcean over other cloud
 
 Before using Proxy Forge, ensure you have the following prerequisites in place:
 
-1. [Digital Ocean Account](https://www.digitalocean.com/?refcode=a7587e994b7e&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+1. [Digital Ocean Account](https://www.digitalocean.com/?refcode=a7587e994b7e&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge): If you do not have an account, I would recommend creating it through my referral to get **200 USD credits for 60 days**. In this time you can test this solution.
+
 2. [Terraform](https://docs.digitalocean.com/reference/terraform/getting-started/) installed on your local machine
 
 ### Steps
