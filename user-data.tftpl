@@ -1,0 +1,35 @@
+#!/bin/sh
+
+set -ex
+
+SQUID_USERNAME="${squid-credentials.username}"
+SQUID_PASSWORD="${squid-credentials.password}"
+# shellcheck disable=SC2154
+LOAD_BALANCER_IP="${loadbalancer-ip}"
+
+apt update
+DEBIAN_FRONTEND=noninteractive apt install squid apache2-utils -y
+htpasswd -bc /etc/squid/passwords "$SQUID_USERNAME" "$SQUID_PASSWORD"
+
+cat <<EOF_SQUID > /etc/squid/squid.conf
+http_port 3128
+
+acl lb src $LOAD_BALANCER_IP
+acl SSL_ports port 443
+acl Safe_ports port 80
+acl Safe_ports port 21
+acl Safe_ports port 443
+http_access allow lb
+
+http_access deny CONNECT !SSL_ports
+
+auth_param basic program /usr/lib/squid/basic_ncsa_auth /etc/squid/passwords
+auth_param basic realm Squid proxy-caching web server
+acl authenticated_users proxy_auth REQUIRED
+http_access allow Safe_ports authenticated_users
+
+http_access deny all
+EOF_SQUID
+
+squid -k parse
+service squid restart
