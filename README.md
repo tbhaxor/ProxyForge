@@ -130,8 +130,8 @@ Proxy Forge is licensed under the **MIT License**. See the [LICENSE](LICENSE) fi
 Thank you for choosing Proxy Forge! I hope this tool helps you overcome IP throttling and blacklisting challenges, making your web-related tasks smoother and more efficient. If you have any questions or encounter issues, feel free to reach out to me. Happy proxying!
 
 Website: https://tbhaxor.com <br />
-Email Address: tbhaxor `at` gmail `dot` com <br />
-LinkedIn: @tbhaxor <br />
-Twitter: @tbhaxor <br />
+Email Address: tbhaxor@gmail.com <br />
+LinkedIn: [@tbhaxor](https://linkedin.com/in/tbhaxor/) <br />
+Twitter: [@tbhaxor](https://x.com/@tbhaxor) <br />
+Reddit: [@tbhaxor](https://www.reddit.com/user/tbhaxor) <br />
 Discord: @tbhaxor.com <br />
-Reddit: @tbhaxor <br />
