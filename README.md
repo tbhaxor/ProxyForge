@@ -111,7 +111,7 @@ squid-credentials = {
 
 ### Increase or Decrease Proxy Droplets
 
-```
+```hcl
 slave-count = 5
 ```
 
