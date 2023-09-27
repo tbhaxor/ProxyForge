@@ -109,16 +109,16 @@ Configuring ProxyForge to suit your specific needs is a straightforward process.
 
 ### Change the Squid Credentials
 
-```hcl
+```terraform
 squid-credentials = {
-    username = "YOUR NEW USERNAME",
+    username = "YOUR NEW USERNAME"
     password = "Y0ur53cr37P@55W0rD"
 }
 ```
 
 ### Increase or Decrease Proxy Droplets
 
-```hcl
+```terraform
 slave-count = 5
 ```
 
