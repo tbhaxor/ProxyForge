@@ -28,7 +28,7 @@ I've been learning Terraform since then, and automated its setup for you. Now it
 There are many reasons why you might choose to use DigitalOcean over other cloud providers. Some of the key benefits include:
 
 - **Simplicity:** DigitalOcean is known for its simple and user-friendly interface. It is easy to get started with DigitalOcean, even if you are new to cloud computing.
-- **Affordability:** DigitalOcean offers competitive pricing for its cloud services. It also offers a generous free tier that includes 1 Droplet, 25 GB of storage, and 2 TB of bandwidth per month.
+- **Affordability:** DigitalOcean offers competitive pricing for its cloud services. Additionally, it provides a substantial 2 TB of free bandwidth each month.
 - **Performance:** DigitalOcean uses high-performance hardware for its Droplets, so you can be sure that your applications will run smoothly.
 - **Reliability:** DigitalOcean has a strong track record of reliability and uptime.
 - **Community:** DigitalOcean has a large and active community of users and developers. This means that there is a wealth of resources available to help you get the most out of your DigitalOcean account.
