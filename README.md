@@ -33,6 +33,14 @@ There are many reasons why you might choose to use DigitalOcean over other cloud
 - **Reliability:** DigitalOcean has a strong track record of reliability and uptime.
 - **Community:** DigitalOcean has a large and active community of users and developers. This means that there is a wealth of resources available to help you get the most out of your DigitalOcean account.
 
+## Proof of Concept
+
+<center>
+    
+[![asciicast](https://asciinema.org/a/0XtgYX87bPJgwORDU9jKDKsrB.svg)](https://asciinema.org/a/0XtgYX87bPJgwORDU9jKDKsrB)
+
+</center>
+
 ## Up and Running
 
 ### Prerequisites
