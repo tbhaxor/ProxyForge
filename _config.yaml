@@ -1,0 +1,15 @@
+theme: minima
+
+title: ProxyForge
+description: Solving IP Throttling with Rotating Proxies
+
+author:
+  name: tbhaxor
+  email: tbhaxor@gmail.com
+
+minima:
+  social_links:
+    - platform: github
+      user_url: "https://github.com/tbhaxor/ProxyForge"
+    - platform: twitter
+      user_url: "https://twitter.com/@tbhaxor"
