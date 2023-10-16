@@ -86,7 +86,7 @@ Before using Proxy Forge, ensure you have the following prerequisites in place:
     SQUID_USERNAME=proxyforge # assuming you did not change squid-credentials.username in the tfvars
     SQUID_PASSWORD=proxyforge # assuming you did not change squid-credentials.password in the tfvars
 
-    while true; do curl -x "http://proxyforge:proxyforge@$LOAD_BALANCER_IP:80" https://ifconfig.me; echo; done
+    while true; do curl -x "http://$SQUID_USERNAME:$SQUID_PASSWORD@$LOAD_BALANCER_IP:80" https://ifconfig.me; echo; done
     ```
 
 ### Variables
