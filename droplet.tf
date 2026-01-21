@@ -4,6 +4,7 @@ resource "random_string" "vm-suffix" {
   upper   = false
   special = false
 }
+
 resource "digitalocean_droplet" "slave" {
   name          = "vm-${var.region}-proxyforge-slave-${random_string.vm-suffix[count.index].result}"
   tags          = [var.tag-name]
@@ -19,4 +20,8 @@ resource "digitalocean_droplet" "slave" {
     loadbalancer-ip   = digitalocean_loadbalancer.this.ip
     squid-credentials = var.squid-credentials
   })
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }

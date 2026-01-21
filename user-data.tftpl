@@ -2,19 +2,17 @@
 
 set -ex
 
-SQUID_USERNAME="${squid-credentials.username}"
-SQUID_PASSWORD="${squid-credentials.password}"
-# shellcheck disable=SC2154
-LOAD_BALANCER_IP="${loadbalancer-ip}"
-
 apt update
 DEBIAN_FRONTEND=noninteractive apt install squid apache2-utils -y
-htpasswd -bc /etc/squid/passwords "$SQUID_USERNAME" "$SQUID_PASSWORD"
+touch /etc/squid/passwords
+%{ for cred in squid-credentials ~}
+htpasswd -b /etc/squid/passwords ${split(":", cred)[0]} ${split(":", cred)[1]}
+%{ endfor ~}
 
 cat <<EOF_SQUID > /etc/squid/squid.conf
 http_port 3128
 
-acl lb src $LOAD_BALANCER_IP
+acl lb src ${loadbalancer-ip}
 acl SSL_ports port 443
 acl Safe_ports port 80
 acl Safe_ports port 21

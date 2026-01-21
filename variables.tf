@@ -59,6 +59,6 @@ variable "ssh-fingerprint" {
 
 variable "squid-credentials" {
   description = "Squid proxy HTTP basic authentication credentials"
-  type        = object({ username = string, password = string })
-  default     = { password = "proxyforge", username = "proxyforge" }
+  type        = list(string)
+  default     = ["proxyforge:proxyforge"]
 }
