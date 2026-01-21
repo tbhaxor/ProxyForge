@@ -17,7 +17,5 @@ provider "digitalocean" {
   token = var.token
 }
 
-provider "random" {
-
-}
+provider "random" {}
 

@@ -1,13 +1,13 @@
-resource "digitalocean_vpc" "main" {
-  name   = "${var.prefix}-${var.region}-vpc"
+resource "digitalocean_vpc" "this" {
+  name   = "vpc-${var.region}-proxyforge"
   region = var.region
 }
 
 
-resource "digitalocean_loadbalancer" "lb" {
-  name        = "${var.prefix}-lb"
+resource "digitalocean_loadbalancer" "this" {
+  name        = "lb-${var.region}-proxyforge"
   droplet_tag = var.tag-name
-  vpc_uuid    = digitalocean_vpc.main.id
+  vpc_uuid    = digitalocean_vpc.this.id
   region      = var.region
   size_unit   = var.lb-count
 
@@ -25,7 +25,7 @@ resource "digitalocean_loadbalancer" "lb" {
 }
 
 resource "digitalocean_firewall" "slave-lb-firewall" {
-  name = "${var.prefix}-fw"
+  name = "fw-proxyforge"
   tags = [var.tag-name]
 
   inbound_rule {
@@ -37,7 +37,7 @@ resource "digitalocean_firewall" "slave-lb-firewall" {
   inbound_rule {
     protocol                  = "tcp"
     port_range                = "all"
-    source_load_balancer_uids = [digitalocean_loadbalancer.lb.id]
+    source_load_balancer_uids = [digitalocean_loadbalancer.this.id]
   }
 
   outbound_rule {
@@ -60,6 +60,6 @@ resource "digitalocean_firewall" "slave-lb-firewall" {
 
 output "lb-ip" {
   description = "IP Address of the load balancer"
-  value       = digitalocean_loadbalancer.lb.ip
+  value       = digitalocean_loadbalancer.this.ip
 }
 
